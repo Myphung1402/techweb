@@ -11,3 +11,26 @@ var firebaseConfig = {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
+
+  var userDatabase = firebase.database().ref('/user')
+
+  function register() {
+      const newUser = userDatabase.push()
+      newUser.set(
+          {
+              username: "lalala",
+              password:"lalala",
+              address: "100",
+              username:"lalala"
+          }
+      )
+      console.log("Done")
+  }
+  function getAllData(){
+      return userDatabase.on('value', function(snapshot){
+          console.log(snapshot.val())
+          userData = snapshot.val()
+          return snapshot.val()
+      })
+      console.log(getAllData())
+  }
