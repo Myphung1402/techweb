@@ -11,3 +11,39 @@ var firebaseConfig = {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
+
+  var userDatabase = firebase.database().ref('/users')
+  function register() {
+    const newUser = userDatabase.push()
+    newUser.set(
+      {
+        username: "TA",
+        password: "TA",
+        fullname: "TA",
+        address: "TA",
+      }
+    )
+    console.log("Done")
+  } 
+  var contentDatabase = firebase.database().ref('/data')
+  function addNewData () {
+    const newData = contentDatabase.push()
+    newData.set(
+      {
+       content: "dsada",
+       image: "",
+       thumbnail: "",
+       title: ""
+      }
+    )
+    console.log("Done")
+  }
+  
+function getAllNewData () {
+  return userDatabase.on('value', function(snapshot){
+    console.log(snapshot.val())
+    userData = snapshot.val()
+    return snapshot.val()
+  })
+}
+console.log(getAllNewData())
