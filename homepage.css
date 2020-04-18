@@ -9,7 +9,7 @@ body{
     background-color:#FFA7BC;
 }
 
-.news, .blog, .programs, .about, .comment, .article{
+.news, .blog, .programs, .about{
     background-color: black;
     color: white;
     padding: 10px;
