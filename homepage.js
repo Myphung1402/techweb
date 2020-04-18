@@ -14,8 +14,11 @@ var firebaseConfig = {
 
   var contentDatabase = firebase.database().ref('/data')
 
-  function addNewData() {
+  contentDatabase.on('value', function (data) {
+    localStorage.setItem('content', JSON.stringify(data.val()))
+  })
 
+  function addNewData() {
     let data = {
       id: Math.floor(Math.random()),
       title: "",
