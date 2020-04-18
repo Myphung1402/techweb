@@ -27,9 +27,9 @@ ul{
     padding-left: 15px;
 }
 body{
-    background: url(./images/pexels-photo-1006293.jpeg);
+    background-image: url("./images/pexels-photo-1006293.jpeg");
     background-repeat: no-repeat;
-    background-size: 1400px 1000px ;
+    background-size: cover;
     font-family: Arial, Helvetica, sans-serif;
 }
 .input2{
