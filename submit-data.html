@@ -9,11 +9,12 @@
 
 <body>
     <label for="">Title: </label>
-    <input type="text" onchange="() => onChange">
+    <input type="text" onchange="onChangeTitle(event.target.value)">
     <label for="">Content: </label>
-    <input type="text">
+    <input type="text" onchange="onChangeContent(event.target.value)">
     <label for="">Image: </label>
-    <input type="text">
+    <input type="text" onchange="onChangeLinkImage(event.target.value)">
+    <button onclick="addNewData()">Submmit</button>
 
 
 

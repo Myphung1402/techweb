@@ -15,7 +15,7 @@ var firebaseConfig = {
   var contentDatabase = firebase.database().ref('/data')
 
   contentDatabase.on('value', function (data) {
-    localStorage.setItem('content', JSON.stringify(data.val()))
+    localStorage.setItem('content', JSON.stringify(Object.values(data.val())))
   })
 
   function addNewData() {

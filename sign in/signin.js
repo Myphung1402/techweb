@@ -7,7 +7,19 @@ var firebaseConfig = {
     messagingSenderId: "607479175084",
     appId: "1:607479175084:web:163e9fadc2468bca908c09",
     measurementId: "G-FYX2ZYWJL7"
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-firebase.analytics();
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+  var userDatabase = firebase.database().ref('/users')
+
+  const usersData = JSON.parse(localStorage.getItem('users'))
+  
+  let username = "ta"
+
+  // find() cua Javascript
+
+  let user = usersData.find(item => item.username === username)
+
+  console.log(user)
