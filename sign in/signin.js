@@ -11,3 +11,19 @@ var firebaseConfig = {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
+  var userDatabase = firebase.database().ref('/users')
+  var userData = JSON.parse(localStorage.getItem('users')) // Sử dụng JSON.parse để chuyển đổi dữ liệu đã lấy ở (1) từ string sang dạng JSON và lấy từ dưới localStorage (2)
+  
+  
+  // Lay data tu phia Firebase Database ve
+  userDatabase.on('value', data => {
+    localStorage.setItem('users', JSON.stringify(Object.values(data.val()))) // Lưu dữ liệu đã lấy về ở trên máy tính => Dữ liệu trả về sẽ được lưu ở dạng string (1)
+  })
+   
+  let username = "ta"
+
+//   find() 
+
+let user = userData.find(item => item.username === username)
+console.log(user)
+
