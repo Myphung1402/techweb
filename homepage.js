@@ -70,25 +70,18 @@ var firebaseConfig = {
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 
-  var userDatabase = firebase.database().ref('/users')
-
   var contentDatabase = firebase.database().ref('/data')
 
-  function register() {
-    const newUser = userDatabase.push()
-    newUser.set(
-      {
-        username: "khanhdo1027",
-        password: "khanhdo",
-        fullname: "Khanh Do",
-        address: "Hanoi"
-      }
-    )
-
-    console.log("Done")
-  }
-
   function addNewData() {
+
+    let newData = {
+      id: Math.floor(Math.random()),
+      title: "",
+      content: "",
+      image: "",
+      created_at: Date.now()
+    }
+
     const newData = contentDatabase.push()
     newData.set(
       {
