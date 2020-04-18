@@ -56,7 +56,20 @@ function addNewData() {
 }
 
 function getAllData() {
-  console.log(userData)
-  console.log(contentData)
+  contentData.map(item => {
+    let html = `
+    <p id="title">Title: <span>
+      ${item.title}
+    </span>
+    </p>
+    <p id="content">Content: 
+      ${item.content}
+    </p>
+  `
+
+    return document.getElementById('data').insertAdjacentHTML("beforeend", html)
+    // return document.getElementById('data').innerHTML = html
+  })
+
 }
 
