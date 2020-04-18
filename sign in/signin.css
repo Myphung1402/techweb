@@ -1,0 +1,82 @@
+#title1{
+    color: #fff;
+}
+.body1{
+    width: 35%;
+    margin: 0 auto;
+    background: rgba(0, 0, 0 ,0.5);
+    padding: 35px;
+    text-align: center;
+    margin-top: 100px;
+}
+.input1{
+    width: 84%;
+    padding: 15px 10px 15px;
+    font-size: 16px;
+    border: 2px solid #537b35;
+    margin-bottom: 26px;
+    background: transparent;
+    color: #fff;
+}
+ul{
+    display: list-item;
+    list-style: none;
+    width: 100%;
+    text-align: left;
+    padding-left: 15px;
+}
+body{
+    background: url(./images/pexels-photo-1006293.jpeg);
+    background-repeat: no-repeat;
+    background-size: 1400px 750px ;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.input2{
+    font-size: 16px;
+    padding: 10px 65px;
+    background-color: #537b35;
+    color: #FFF;
+    border: none;
+    border-radius: 0px;
+    margin-top: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+#abc{
+    color: #fff;
+    float: right;
+    margin-right: 40px;
+}
+.text1{
+    margin-top: 40px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    text-align: center;
+}
+#ad1{
+    color: #fff;
+    font-weight: 600;
+    padding: 8px 20px;
+    border: 1px solid #fff;
+}
+#abc1{
+    color: #fff;
+    margin-left: 5px;
+}
+#abc2{
+    color: #fff;
+}
+.checkbox1{
+    margin-left: 10px;
+}
+::placeholder{
+    color: #444444;
+}
+#icon1{
+    background: url(./images/password.png) no-repeat 382px 11px;
+    background-size: 25px;
+}
+#icon2{
+    background: url(./images/user.png) no-repeat 382px 11px;
+    background-size: 25px;
+}
