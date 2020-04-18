@@ -16,7 +16,7 @@ var firebaseConfig = {
 
   function addNewData() {
 
-    let newData = {
+    let data = {
       id: Math.floor(Math.random()),
       title: "",
       content: "",
@@ -26,11 +26,6 @@ var firebaseConfig = {
 
     const newData = contentDatabase.push()
     newData.set(
-      {
-        title:"abcxyz",
-        content:"Loremngjsdjh",
-        image: "",
-        thumbnail:"",
-      }
+      data
     )
   }
