@@ -14,6 +14,8 @@ var firebaseConfig = {
 
   var contentDatabase = firebase.database().ref('/data')
 
+  var contentData = JSON.parse("content")
+
   contentDatabase.on('value', function (data) {
     localStorage.setItem('content', JSON.stringify(Object.values(data.val())))
   })
@@ -27,8 +29,8 @@ var firebaseConfig = {
       created_at: Date.now()
     }
 
-    const newData = contentDatabase.push()
-    newData.set(
+    const data = contentDatabase.push()
+    data.set(
       data
     )
   }
