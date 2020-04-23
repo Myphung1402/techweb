@@ -46,6 +46,7 @@ function onChangeFullname (value) {
   userInfo.fullname = value
 }
 function onChangeRePassword (value) {
+  console.log(value)
   userInfo.repassword = value
 } 
  function signup(){
