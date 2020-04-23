@@ -20,7 +20,7 @@ var firebaseConfig = {
   
   // Lay data tu phia Firebase Database ve
   userDatabase.on('value', data => {
-    localStorage.setItem('users', JSON.stringify(data.val())) // Lưu dữ liệu đã lấy về ở trên máy tính => Dữ liệu trả về sẽ được lưu ở dạng string (1)
+    localStorage.setItem('users', JSON.stringify(Object.values(data.val()))) // Lưu dữ liệu đã lấy về ở trên máy tính => Dữ liệu trả về sẽ được lưu ở dạng string (1)
   })
   
 
@@ -33,19 +33,20 @@ var firebaseConfig = {
    repassword:"" 
  }
 
- function onChangUsername (value) {
+ function onChangeUsername (value) {
    userInfo.username = value
  }
- function onChangPassword (value) {
+ function onChangePassword (value) {
   userInfo.password = value
 }
-function onChangEmail (value) {
+function onChangeEmail (value) {
   userInfo.email = value
 }
-function onChangFullname (value) {
+function onChangeFullname (value) {
   userInfo.fullname = value
 }
-function onChangRePassword (value) {
+function onChangeRePassword (value) {
+  console.log(value)
   userInfo.repassword = value
 } 
  function signup(){
