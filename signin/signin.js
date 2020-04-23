@@ -1,3 +1,9 @@
+const user = {
+  password : "",
+  username : ""
+}
+
+}
 var firebaseConfig = {
     apiKey: "AIzaSyBLehoen_3ECaH49R3otGCWLpxOujgR5uc",
     authDomain: "techweb-17c29.firebaseapp.com",
@@ -15,15 +21,33 @@ var firebaseConfig = {
   var userDatabase = firebase.database().ref('/users')
 
   const usersData = JSON.parse(localStorage.getItem('users'))
+
+  userDatabase.on('value', data => {
+    localStorage.setItem('users', JSON.stringify(Object.values(data.val()))) // Lưu dữ liệu đã lấy về ở trên máy tính => Dữ liệu trả về sẽ được lưu ở dạng string (1)
+  })
+  function onChangeUsername (value) {
+    user.username = value
+  }
+  function onChangePassword (value) {
+    user.password = value
+  }
+
   
   // let username = "namnguyen"
   
 
   // // find() cua Javascript
 
-  // let user = usersData.find(item => item.username === username)
+  let findUser = usersData.find(item => {
+    if (item.username === user.username) {
+      result = true
+    } else {
+    re false
+  }
+}
+)
 
-  // console.log(user)
+  console.log(user)
 
 
  

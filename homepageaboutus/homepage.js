@@ -1,3 +1,10 @@
+var data = {
+  id: Math.floor(Math.random()),
+  title: "",
+  content: "",
+  image: "",
+  created_at: new Date().toISOString ()
+}
 var firebaseConfig = {
     apiKey: "AIzaSyBLehoen_3ECaH49R3otGCWLpxOujgR5uc",
     authDomain: "techweb-17c29.firebaseapp.com",
@@ -20,17 +27,19 @@ var firebaseConfig = {
     localStorage.setItem('content', JSON.stringify(Object.values(data.val())))
   })
 
-  function addNewData() {
-    let data = {
-      id: Math.floor(Math.random()),
-      title: "",
-      content: "",
-      image: "",
-      created_at: Date.now()
-    }
 
-    const data = contentDatabase.push()
-    data.set(
+  function onChangeTitle (value) { 
+    data.title = value
+  }
+  function onChangeContent (value) {
+    data.content = value
+  }
+  function onChangeLinkImage (value) {
+    data.image = value
+  }
+  function addNewData() {
+    const abc = contentDatabase.push()
+    abc.set(
       data
     )
   }
