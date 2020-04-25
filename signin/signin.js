@@ -40,7 +40,7 @@ function submit() {
   if (findUser.length > 0) {
     findUser.find(item => {
       if (item.password === user.password) {
-        alert("Login Success")
+        window.location.href = "../homepageaboutus/index.html"
       } else {
         alert("Wrong Username or Password")
       }
