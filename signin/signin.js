@@ -1,3 +1,9 @@
+
+let user = {
+  username: "",
+  password: ""
+}
+
 var firebaseConfig = {
   apiKey: "AIzaSyBLehoen_3ECaH49R3otGCWLpxOujgR5uc",
   authDomain: "techweb-17c29.firebaseapp.com",
@@ -17,31 +23,30 @@ var userDatabase = firebase.database().ref('/users')
 userDatabase.on('value', function (data) {
   localStorage.setItem('users', JSON.stringify(Object.values(data.val())))
 })
-const usersData = JSON.parse(localStorage.getItem('users'))
-
-let user = {
-  username: "",
-  password: ""
-}
+var usersData = JSON.parse(localStorage.getItem('users'))
 
 function onChangeUsername(value) {
   user.username = value
 }
 
-function onChangePassword (value) {
-  console.log(value)
+function onChangePassword(value) {
   user.password = value
 }
 // find() cua Javascript
 
-function submit () {
-  let findUser = usersData.find(item => item.username = user.username)
-  if (findUser) {
-    if (findUser.password === user.password) {
-      alert("Login Success")
-    } else {
-      alert("Wrong Username or Password")
-    }
+function submit() {
+  let findUser = usersData.filter(item => item.username === user.username)
+  // if (findUser !== undefined) {
+  if (findUser.length > 0) {
+    findUser.find(item => {
+      if (item.password === user.password) {
+        window.location.href = "../homepageaboutus/index.html"
+      } else {
+        alert("Wrong Username or Password")
+      }
+    })
+  } else {
+    alert("Wrong Username or Password")
   }
 }
 
