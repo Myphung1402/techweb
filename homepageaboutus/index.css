@@ -5,8 +5,7 @@ footer{
     background-color:black;
     color: white;
     padding: 20px;
-    height: inherit;
-    width: inherit;
+    
 }
 
 
@@ -17,14 +16,13 @@ body{
     background-color: #EBF5FB;
 }
 
-.news, .blog, .programs, .about, .article, .comment, .summit{
+.news, .blog, .programs, .about, .article, .comment, .col-sm{
     background-color: #AED6F1;
     color: black;
     padding: 10px;
     margin: 30px 0px;
 }
-
-.article{
+p, a{
     font-size: 20px;
 }
 
@@ -36,7 +34,8 @@ a{
     color: black;
 }
 
- h1{
+ h1, .members{
      display: flex;
      justify-content: center;
+     margin: 10px;
  }
