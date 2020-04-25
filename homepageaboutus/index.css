@@ -16,7 +16,7 @@ body{
     background-color: #EBF5FB;
 }
 
-.news, .blog, .programs, .about, .article, .comment, .col-sm{
+.news, .blog, .programs, .about, .article, .comment, .col{
     background-color: #AED6F1;
     color: black;
     padding: 10px;
