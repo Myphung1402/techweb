@@ -25,8 +25,8 @@
 	<div class="body1">
 		<h2 id="title1">LOGIN HERE</h2>
 		<input type="text" placeholder="USERNAME" id="icon2" class="input1"
-			onchange="(event) => onChangeUsername(event.target.value)">
-		<input type="password" placeholder="PASSWORD" id="icon1" class="input1" id="password">
+			onchange=" onChangeUsername(event.target.value)">
+		<input type="password" placeholder="PASSWORD" id="icon1" class="input1" id="password" onchange="onChangePassword(event.target.value)">
 		<ul class="">
 			<li>
 				<input type="checkbox" class="checkbox1">
@@ -35,7 +35,7 @@
 			</li>
 		</ul>
 		<div class="">
-			<button class="input2">LOGIN</button>
+			<button class="input2" onclick="submit()">LOGIN</button>
 			<p id="abc2" class="text1"> To register new account <span>→</span> <a id="ad1" href="./signup.html"> Click
 					Here</a></p>
 			<div class="clear"></div>
