@@ -24,7 +24,7 @@ var firebaseConfig = {
   })
   
 
-  
+
  let userInfo = {
    username : "",
    password: "",
@@ -54,5 +54,6 @@ function onChangeRePassword (value) {
    newUser.set(
      userInfo
    )
+   alert('Login Successful')
  }
  
